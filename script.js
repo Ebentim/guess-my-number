@@ -37,9 +37,7 @@ check.addEventListener("click", function () {
     }
   } else if (guess !== hiddenNumber) {
     if (score > 1) {
-      guess > hiddenNumber
-        ? displayMessage("📈 Too high!")
-        : displayMessage("📉 Too low!");
+      displayMessage(guess > hiddenNumber ? "📈 Too high!" : "📉 Too low!");
       score--;
       scoreOutput(score);
     } else {
